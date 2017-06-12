@@ -1,5 +1,10 @@
 #section-1 {
 	font-size:4rem;
+	@include media(">phone") {
+		background: url('../images/section-1-bg.png');
+		background-size: contain;
+		background-repeat:no-repeat;
+	}
 	h2 { 
 		text-align:center;
 	}

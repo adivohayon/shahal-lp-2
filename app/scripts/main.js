@@ -128,11 +128,13 @@ $(document).ready(function() {
 
 	$('.send-cv').click(function(e) {
 		e.preventDefault();
+
 		var job = $(this).attr('data-job');
 		console.log(job);
 		$('#desktop-lead-job option[value=' + job +']').attr('selected','selected');
 		$('#desktop-lead-job').val(job);
 		$('#mobile-lead-job option[value=' + job +']').attr('selected','selected');
 		$('#mobile-lead-job').val(job);
+		$("body").animate({"scrollTop": "0px"}, 300);
 	});
 });
