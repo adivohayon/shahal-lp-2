@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Pauza';
+	src: url(#{$icon-font-path}/pauza/PauzaBook.eot);
+	src: url(#{$icon-font-path}/pauza/PauzaBook.eot?#iefix) format('embedded-opentype'),
+	     url(#{$icon-font-path}/pauza/PauzaBook.woff) format('woff'),
+	     url(#{$icon-font-path}/pauza/PauzaBook.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pauza';
+	src: url(#{$icon-font-path}/pauza/PauzaBold.eot);
+	src: url(#{$icon-font-path}/pauza/PauzaBold.eot?#iefix) format('embedded-opentype'),
+	     url(#{$icon-font-path}/pauza/PauzaBold.woff) format('woff'),
+	     url(#{$icon-font-path}/pauza/PauzaBold.ttf) format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pauza';
+	src: url(#{$icon-font-path}/pauza/PauzaLight.eot);
+	src: url(#{$icon-font-path}/pauza/PauzaLight.eot?#iefix) format('embedded-opentype'),
+	     url(#{$icon-font-path}/pauza/PauzaLight.woff) format('woff'),
+	     url(#{$icon-font-path}/pauza/PauzaLight.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
