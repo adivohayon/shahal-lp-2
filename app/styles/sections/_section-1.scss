@@ -1,3 +1,54 @@
 #section-1 {
 	font-size:4rem;
+	h2 { text-align:center; }
+	#doctors-carousel {
+	    .carousel-inner{
+	      height: 36rem;
+	      margin:0;
+	      .item {
+	        img {
+	          margin: auto;
+	        }
+	        .doctors-carousel-slide-text {
+	          text-align: center;
+	          padding:0 2rem;
+	          .doctor-name {
+	            font-size: 2.2rem;
+	          }
+	          .doctor-info {
+	          	width: 20rem;
+    			margin: auto;
+	            line-height: 1.9rem;
+	          }
+	        }
+	      }
+	    }
+
+	    a {
+	      display: block;
+	      position: absolute;
+	      bottom: 15rem;
+	      &.carousel-control-next {
+	        right: 1rem;
+	        .carousel-control-next-icon {
+	          background-image: url(../images/carousel-control-next-icon.png);
+	          background-size: cover;
+	          display: block;
+	          height: 3rem;
+	          width: 3rem;
+	        }
+	      }
+
+	      &.carousel-control-prev {
+	        left:1rem;
+	        .carousel-control-prev-icon {
+	          background-image: url(../images/carousel-control-prev-icon.png);
+	          background-size: cover;
+	          display: block;
+	          height: 3rem;
+	          width: 3rem;
+	        }
+	      }
+	    }
+  }
 }

@@ -40,13 +40,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size:6rem; }
 h2 { 
 	font-size:2.3rem;
+	color: $text-dark;
 	@include media(">phone") {
 		font-size:4rem; 
 	}
 }
-h3 { font-size:3.3rem; }
+h3 { 
+	font-size:3.3rem;
+	color:$text-dark;
+	font-weight:normal;
+	}
 h4 { font-size:2.1rem; }
 
 p {
-	font-size:1.6rem; font-weight:lighter;
+	font-size:1.8rem; font-weight:lighter;
 }
