@@ -1,17 +1,34 @@
-header {
+header#site-header {
 	// height:7.8rem;
-	height:10rem;
-	background-color:$orange;
-	display: flex;
 	padding:0!important;
 	@include media(">phone") {
-		height:100%;
+		background: url('../images/header-background.png');
+		background-size:cover;
+
 	}
+	.content {
+		height:10rem;
+		background-color:$orange;
+		display: flex;
+		
+		@include media(">phone") {
+			height:41rem;
+			background-color: initial;
+		}
+	}
+	
 	.logo {
 		height: 100%;
 		padding: 3rem 1.5rem 2rem 1.5rem;
 		width: auto;
 		img {height:100%;width:auto;}
+		@include media(">phone") {
+			height:initial;
+			img {
+				width:10rem;
+				height:auto;
+			}
+		}
 	}
 
 	.text {
@@ -21,6 +38,10 @@ header {
 			line-height: 10rem;
 			margin: 0;
 			text-align:center;
+		}
+		@include media(">phone") {
+			flex:initial;
+			h1 {text-align:right;}
 		}
 	}
 
@@ -34,6 +55,34 @@ header {
 			margin-top:1rem;
 			margin-left: -2rem;
 
+		}
+
+		@include media(">phone") {
+			position:relative;
+			width:36rem;
+			height:auto;
+			img {
+				width: 100%;
+				height: auto;
+				position: absolute;
+				margin: 0;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	.lead-form {
+		padding: 2rem;
+		form {
+			padding:1rem;
+			width:30rem;
+			height:100%;
+			background-color: #e8e8e8;
+
+			header {
+				h4 {margin:0;}
+			}
 		}
 	}
 }
