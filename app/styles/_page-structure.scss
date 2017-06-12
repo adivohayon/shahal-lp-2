@@ -2,3 +2,11 @@
 	width:100%;
 	
 }
+
+.wrapper {
+	width:100%;
+	@include media(">phone") {
+		max-width:1200px;
+		margin: auto;
+	}
+}
