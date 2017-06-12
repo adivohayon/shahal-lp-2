@@ -2,4 +2,38 @@ header {
 	// height:7.8rem;
 	height:10rem;
 	background-color:$orange;
+	display: flex;
+	padding:0!important;
+	@include media(">phone") {
+		height:100%;
+	}
+	.logo {
+		height: 100%;
+		padding: 3rem 1.5rem 2rem 1.5rem;
+		width: auto;
+		img {height:100%;width:auto;}
+	}
+
+	.text {
+		flex:3;
+		h1 {
+			color:#ffffff;
+			line-height: 10rem;
+			margin: 0;
+			text-align:center;
+		}
+	}
+
+	.header-image {
+		// flex:2.4;
+		overflow:hidden;
+		text-align:left;
+		width:13rem;
+		img {
+			height:138%;
+			margin-top:1rem;
+			margin-left: -2rem;
+
+		}
+	}
 }
