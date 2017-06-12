@@ -62,5 +62,9 @@ h3 {
 h4 { font-size:2.1rem; }
 
 p {
-	font-size:1.8rem; font-weight:lighter;
+	font-size:1.8rem;
+	font-weight:lighter;
+	@include media(">phone") {
+		font-size: 2.4rem;
+	}
 }
