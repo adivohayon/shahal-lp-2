@@ -2,10 +2,21 @@
 	h2 {
 		text-align: center;
 		color: $orange;
+		@include media(">phone") {
+			text-align: right;
+			padding-right: 20rem;
+			margin-top: 6.2rem;
+		}
 	}
 	p{
 		text-align: center;
-		font-size: 1.8rem;
 		line-height: 2rem;
+		@include media(">phone") {
+			text-align: right;
+			padding-right: 20rem;
+			padding-left: 24rem;
+    		padding-bottom: 2rem;
+  			line-height: 2.7rem;
+		}
 	}
 }

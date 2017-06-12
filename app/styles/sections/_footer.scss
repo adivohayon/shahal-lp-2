@@ -2,9 +2,14 @@ footer {
 	font-size:1rem;
 	background-color:$orange;
 	height:5rem;
+	position:relative;
 	p {
 		color:#ffffff;
 		text-align: center;
 		margin-top: 1rem;
+	}
+	.doctor-heart {
+		position: absolute;
+		bottom: 0;
 	}
 }
