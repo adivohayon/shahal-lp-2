@@ -1,24 +1,46 @@
 #section-1 {
 	font-size:4rem;
-	h2 { text-align:center; }
+	h2 { 
+		text-align:center;
+	}
 	#doctors-carousel {
 	    .carousel-inner{
 	      height: 36rem;
 	      margin:0;
 	      .item {
+	      	@include media(">phone") {
+	      		display: block;
+			    width: 25%;
+			    float: right;
+			    padding: 3rem;
+		    }
 	        img {
 	          margin: auto;
 	        }
 	        .doctors-carousel-slide-text {
 	          text-align: center;
 	          padding:0 2rem;
+	          @include media(">phone") {
+	          	padding:0;
+	          }
 	          .doctor-name {
 	            font-size: 2.2rem;
+	            @include media(">phone") {
+	            	font-size: 1.75rem;
+	            	margin-bottom: 0.5rem;
+	            	margin-top: 0.5rem;
+	            }
 	          }
 	          .doctor-info {
-	          	width: 20rem;
+	          	padding: 0 8rem;
     			margin: auto;
 	            line-height: 1.9rem;
+	            @include media(">phone") {
+		        	padding:0;
+		        	font-size: 1.25rem;
+		        	line-height: 1.2rem;
+		        	height: 7rem;	
+		       	} 
 	          }
 	        }
 	      }
