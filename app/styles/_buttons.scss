@@ -1,6 +1,24 @@
 .btn {
-	&.btn-orange {}
-	&.btn-small {}
+	color:#ffffff;
+	font-family: 'Pauza', sans-serif;
+	font-weight: lighter;
+	border-radius:0;
+	padding: 0.5rem 0.8rem 0.8rem;
+	
+	&:hover {color:#ffffff;}
+	&.btn-orange {
+		background-color:$orange;
+	}
+	&.btn-grey {
+		background-color:$text-dark;
+	}
+	&.btn-small {
+
+	}
+	&.btn-large {
+		font-size: 2rem;
+		line-height: 1.2;
+	}
 }
 
 

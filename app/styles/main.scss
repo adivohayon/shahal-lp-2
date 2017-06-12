@@ -3,16 +3,18 @@ $icon-font-path: '../fonts';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 @import "vendor/vendor";
+@import "mixins";
 @import "colors";
 @import "typography";
 @import "page-structure";
 @import "buttons";
+@import "forms";
 @import "sections/header";
 @import "sections/section-1";
 @import "sections/section-2";
 @import "sections/section-3";
 @import "sections/footer";
-
+ 
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;

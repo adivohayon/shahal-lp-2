@@ -15,24 +15,60 @@
 		<div class="header-image">
 			<img src="images/doctors-real.png" alt="">
 		</div>
-		<div class="lead-form">
-			<form action="#" id="lead-form">
+		<div class="lead-form hidden-xs">
+			<form action="#" id="desktop-lead-form">
 				<header>
 					<h4>מתאימים?</h4>
 					<p>הגישו קורות חיים<br /> וניצור אתכם קשר בהקדם</p>
 				</header>
 				<div class="form-fields">
-					<input type="text" id="lead-name" placeholder="*שם מלא" />
-					<input type="number" id="lead-phone" placeholder="*טלפון" />  
-					<input type="number" id="lead-phone-first" />
-					<input type="email" id="lead-email" placeholder="דוא\"ל" />
-					<select name="lead-job" id="lead-job">
-						<option value="">אופציה 1</option>
-					</select>
+					<input type="text" id="desktop-lead-name" placeholder="*שם מלא" />
+					<input type="number" id="desktop-lead-phone"  class="lead-phone" placeholder="*טלפון" />  
+					<input type="number" id="desktop-lead-phone-first" class="lead-phone-first clearfix" />
+					<input type="email" id="desktop-lead-email" placeholder="דוא\"ל" />
+					<div class="select-style">
+						<select name="desktop-lead-job" id="lead-job">
+							<option value="">אופציה 1</option>
+						</select>
+					</div>
+					<div class="buttons-container">
+						<button class="btn btn-grey btn-large" id="desktop-upload-button">
+							העלה קובץ קו"ח"
+						</button>
+						<button class="btn btn-orange btn-large send-button" id="desktop-send-button">
+							שלח קו"ח!
+						</button>
+					</div>
 				</div>
 			</form>
 		</div>
 	</div>
-	
+	<div class="lead-form visible-xs">
+		<form action="#" id="mobile-lead-form">
+			<header>
+				<h4>מתאימים?</h4>
+				<p>הגישו קורות חיים<br /> וניצור אתכם קשר בהקדם</p>
+			</header>
+			<div class="form-fields">
+				<input type="text" id="mobile-lead-name" placeholder="*שם מלא" />
+				<input type="number" id="mobile-lead-phone"  class="lead-phone" placeholder="*טלפון" />  
+				<input type="number" id="mobile-lead-phone-first" class="lead-phone-first clearfix" />
+				<input type="email" id="mobile-lead-email" placeholder="דוא\"ל" />
+				<div class="select-style">
+					<select name="mobile-lead-job" id="lead-job">
+						<option value="">אופציה 1</option>
+					</select>
+				</div>
+				<div class="buttons-container">
+					<button class="btn btn-grey btn-large" id="mobile-upload-button">
+						העלה קובץ קו"ח"
+					</button>
+					<button class="btn btn-orange btn-large send-button" id="mobile-send-button">
+						שלח קו"ח!
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
 
 </header>

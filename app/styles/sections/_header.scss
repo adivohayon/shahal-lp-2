@@ -75,14 +75,39 @@ header#site-header {
 	.lead-form {
 		padding: 2rem;
 		form {
-			padding:1rem;
-			width:30rem;
-			height:100%;
 			background-color: #e8e8e8;
+			height:100%;
 
 			header {
 				h4 {margin:0;}
+				background-color:#ffffff;
 			}
+
+			.form-fields {
+				padding:1.5rem;
+				width:30rem;
+				height:100%;
+				
+				.buttons-container {
+					width:100%;
+					margin-top:1.5rem;
+
+					.upload-button {}
+					.send-button {float:left;}
+				}
+
+				@include media("<=phone") {
+					min-width: 30rem;
+					max-width: 57rem;
+					width:100%;
+					margin:auto;
+				}
+			}
+
+
+
+			.lead-phone {width:71%;}
+			.lead-phone-first {width:25%; float:left;}
 		}
 	}
 }
