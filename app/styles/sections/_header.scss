@@ -13,7 +13,10 @@ header#site-header {
 		
 		@include media(">phone") {
 			height:41rem;
+			max-width: 1024px;
+			position:relative;
 			background-color: initial;
+			// max-width: 1034px;
 		}
 	}
 	
@@ -25,7 +28,7 @@ header#site-header {
 		@include media(">phone") {
 			height:initial;
 			img {
-				width:10rem;
+				width:12rem;
 				height:auto;
 			}
 		}
@@ -41,7 +44,13 @@ header#site-header {
 		}
 		@include media(">phone") {
 			flex:initial;
-			h1 {text-align:right;}
+			display:block;
+			position:absolute;
+			width: 34rem;
+			z-index:20;
+			h1 {text-align:right; line-height:7rem;}
+
+			p {color:#ffffff;}
 		}
 	}
 
@@ -58,16 +67,17 @@ header#site-header {
 		}
 
 		@include media(">phone") {
-			position:relative;
-			width:36rem;
-			height:auto;
+			position: absolute;
+			bottom: 0;
+			left: 0rem;
+			height: 93%;
+			width: 95%;
+			z-index: 10;
+			text-align: center;
 			img {
-				width: 100%;
+				width: 41rem;
 				height: auto;
-				position: absolute;
 				margin: 0;
-				bottom: 0;
-				left: 0;
 			}
 		}
 	}
@@ -76,6 +86,10 @@ header#site-header {
 
 		@include media(">phone") {
 			padding:1.5rem;
+			// margin-right: 40rem;
+			z-index: 20;
+			position: absolute;
+			left: 0;
 		}
 		form {
 			background-color: #e8e8e8;

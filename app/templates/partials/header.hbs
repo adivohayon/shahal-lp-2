@@ -23,24 +23,34 @@
 					<img src="images/triangle-down.png" class="triangle-down" alt="">
 				</header>
 				<div class="form-fields">
-					<input type="text" id="desktop-lead-name" placeholder="*שם מלא" />
-					<input type="number" id="desktop-lead-phone"  class="lead-phone" placeholder="*טלפון" />  
-					<input type="number" id="desktop-lead-phone-first" class="lead-phone-first clearfix" />
-					<input type="email" id="desktop-lead-email" placeholder="דוא\"ל" />
-					<div class="select-style">
-						<select name="desktop-lead-job" id="lead-job">
-							<option value="">אופציה 1</option>
+					<input class="hide-on-success" type="text" id="desktop-lead-name" placeholder="*שם מלא" />
+					<input class="hide-on-success lead-phone" type="number" id="desktop-lead-phone" placeholder="*טלפון" />  
+					<input class="hide-on-success lead-phone-first clearfix" type="number" id="desktop-lead-phone-first"  />
+					<input class="hide-on-success" type="email" id="desktop-lead-email" placeholder="דוא\"ל" />
+					<div class="hide-on-success select-style">
+						<select name="desktop-lead-job" id="desktop-lead-job">
+							<option value="first_call">ננציגי קו רפואי ראשון</option>
+							<option value="nurses_operator">אחיות למוקד הרפואי</option>
+							<option value="paramedics">פארמדיקים</option>
+							<option value="doctors">רופאים</option>
 						</select>
 					</div>
-					<div class="buttons-container">
-						<button class="btn btn-grey btn-large" id="desktop-upload-button">
+					<div class="hide-on-success buttons-container">
+						<input type="file" accept=".pdf,.doc,.docx" class="hidden" id="file-upload" />
+						<button class="btn btn-grey btn-large upload-file-button" id="desktop-upload-button">
 							העלה קובץ קו"ח"
 						</button>
-						<button class="btn btn-orange btn-large send-button" id="desktop-send-button">
+						<button type="submit" class="btn btn-orange btn-large send-button" id="desktop-send-button">
 							שלח קו"ח!
 						</button>
 					</div>
+
+					<div class="form-success-container">
+						<h4>תודה!</h4>
+						<p>פנייתך התקבלה.</p>
+					</div>
 				</div>
+				
 			</form>
 		</div>
 	</div>
@@ -52,22 +62,30 @@
 				<img src="images/triangle-down.png" class="triangle-down" alt="">
 			</header>
 			<div class="form-fields">
-				<input type="text" id="mobile-lead-name" placeholder="*שם מלא" />
-				<input type="number" id="mobile-lead-phone"  class="lead-phone" placeholder="*טלפון" />  
-				<input type="number" id="mobile-lead-phone-first" class="lead-phone-first clearfix" />
-				<input type="email" id="mobile-lead-email" placeholder="דוא\"ל" />
-				<div class="select-style">
-					<select name="mobile-lead-job" id="lead-job">
-						<option value="">אופציה 1</option>
+				<input type="text" id="mobile-lead-name" placeholder="*שם מלא" class="hide-on-success" />
+				<input type="number" id="mobile-lead-phone"  class="hide-on-success lead-phone" placeholder="*טלפון" />  
+				<input type="number" id="mobile-lead-phone-first" class="hide-on-success lead-phone-first clearfix" />
+				<input type="email" id="mobile-lead-email" class="hide-on-success" placeholder="דוא\"ל" />
+				<div class="hide-on-success select-style">
+					<select name="mobile-lead-job" id="mobile-lead-job">
+						<option value="first_call">ננציגי קו רפואי ראשון</option>
+						<option value="nurses_operator">אחיות למוקד הרפואי</option>
+						<option value="paramedics">פארמדיקים</option>
+						<option value="doctors">רופאים</option>
 					</select>
 				</div>
-				<div class="buttons-container">
-					<button class="btn btn-grey btn-large" id="mobile-upload-button">
+				<div class="hide-on-success buttons-container">
+
+					<button class="btn btn-grey btn-large upload-file-button" id="mobile-upload-button" >
 						העלה קובץ קו"ח"
 					</button>
 					<button class="btn btn-orange btn-large send-button" id="mobile-send-button">
 						שלח קו"ח!
 					</button>
+				</div>
+				<div class="form-success-container">
+					<h4>תודה!</h4>
+					<p>פנייתך התקבלה.</p>
 				</div>
 			</div>
 		</form>

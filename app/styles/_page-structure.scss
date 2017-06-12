@@ -4,8 +4,9 @@
 }
 
 .wrapper {
-	width:100%;
+	
 	@include media(">phone") {
+		width:100%;
 		max-width:1200px;
 		margin: auto;
 	}
