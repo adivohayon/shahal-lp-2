@@ -31,14 +31,20 @@ $(document).ready(function() {
 		    }
 
 		    var cvFile= $( '#file-upload' ).val();
+		    console.log('cvFile', cvFile);
+		    if (!cvFile) {
+		    	 console.log('no cvFile', cvFile);
+		    	$('#' + formType + '-form .upload-file-button').addClass('error');
+		    	go = false;
+		    }
 
 		    var ext = cvFile.split('.').pop();
-		    if(ext=="pdf" || ext=="docx" || ext=="doc"){
+		    if(ext=='pdf' || ext=='docx' || ext=='doc'){
 		    	// console.log('aaaaa')
 		        
 		    } else {
 		    	go = false;
-		    	$('#' + formType + ' .upload-file').addClass('error');
+		    	$('#' + formType + ' .upload-file-button').addClass('error');
 		    }
 
 		    
@@ -77,8 +83,8 @@ $(document).ready(function() {
 
 		    // $.get($url, $values).done(function (res) { 
 		    //     // fbq('track', 'shachal_lead');
-		    //     $('#' + formType + '-form .form-input-container').hide();
-		    //     $('#' + formType + '-form .form-success-container').show();
+      //   	    $('#' + formType + '-form .hide-on-success').hide();
+      //           $('#' + formType + '-form .form-success-container').show();
 		    // });
 
 		    // swal('נשלח בהצלחה');
@@ -93,23 +99,25 @@ $(document).ready(function() {
 		    var cv_url = 'http://dev.jetwebserver.com/shahal/postcv.php';
 
 		    console.log('cvFile', data);
-		    $.ajax({
-		        url: 'http://dev.jetwebserver.com/shahal/postcv.php',
-		        data: data,
-		        cache: false,
-		        contentType: 'multipart/form-data',
-		        processData: false,
-		        type: 'POST',
-		        success: function(data){
-		            console.log('success',data);
-		        },
-		        error: function(resp) {
-		        	console.log('error', resp);
-		        }
+		    // $.ajax({
+		    //     url: 'http://dev.jetwebserver.com/shahal/postcv.php',
+		    //     data: data,
+		    //     cache: false,
+		    //     contentType: 'multipart/form-data',
+		    //     processData: false,
+		    //     type: 'POST',
+		    //     success: function(data){
+		    //         console.log('success',data);
+		    //     },
+		    //     error: function(resp) {
+		    //     	console.log('error', resp);
+		    //     }
+		    // });
+
+
+		    $.post($cv_url, $mail_values).done(function (res) { 
+		    	console.log(res);
 		    });
-
-
-		    // $.post($cv_url, $mail_values).done(function (res) { });
 
 		    $('#' + formType + '-form').submit(function () {
 		        return;
@@ -125,6 +133,11 @@ $(document).ready(function() {
 		$('#file-upload').trigger('click');
 	});
 
+	$( '#file-upload' ).on('change', function() {
+		var cvFile= $( '#file-upload' ).val();
+		$('.file-selected').append(cvFile);
+	});
+
 
 	$('.send-cv').click(function(e) {
 		e.preventDefault();
@@ -135,6 +148,6 @@ $(document).ready(function() {
 		$('#desktop-lead-job').val(job);
 		$('#mobile-lead-job option[value=' + job +']').attr('selected','selected');
 		$('#mobile-lead-job').val(job);
-		$("body").animate({"scrollTop": "0px"}, 300);
+		$('body').animate({'scrollTop': '0px'}, 300);
 	});
 });

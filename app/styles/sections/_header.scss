@@ -12,7 +12,7 @@ header#site-header {
 		display: flex;
 		
 		@include media(">phone") {
-			height:41rem;
+			height:42rem;
 			max-width: 1024px;
 			position:relative;
 			background-color: initial;
@@ -22,7 +22,7 @@ header#site-header {
 	
 	.logo {
 		height: 100%;
-		padding: 3rem 1.5rem 2rem 1.5rem;
+		padding: 3rem 1rem 3rem 1rem;
 		width: auto;
 		img {height:100%;width:auto;}
 		@include media(">phone") {
@@ -41,6 +41,7 @@ header#site-header {
 			line-height: 10rem;
 			margin: 0;
 			text-align:center;
+			font-size: 2.2rem;
 		}
 		@include media(">phone") {
 			flex:initial;
@@ -50,7 +51,7 @@ header#site-header {
 			z-index:20;
 			h1 {text-align:right; line-height:7rem;}
 
-			p {color:#ffffff;}
+			p {color:#ffffff; line-height: 1;}
 		}
 	}
 
@@ -58,11 +59,11 @@ header#site-header {
 		// flex:2.4;
 		overflow:hidden;
 		text-align:left;
-		width:13rem;
+		width:11rem;
 		img {
-			height:138%;
-			margin-top:1rem;
-			margin-left: -2rem;
+			height: 112%;
+		    margin-top: 1rem;
+		    margin-left: -1rem;
 
 		}
 
@@ -75,7 +76,7 @@ header#site-header {
 			z-index: 10;
 			text-align: center;
 			img {
-				width: 41rem;
+				width: 42rem;
 				height: auto;
 				margin: 0;
 			}
@@ -152,6 +153,12 @@ header#site-header {
 					.send-button {float:left;}
 				}
 
+				.file-selected {
+					font-family: sans-serif;
+					font-size: 1.3rem;
+					margin-top:1rem;
+				}
+
 				@include media("<=phone") {
 					min-width: 30rem;
 					max-width: 57rem;
@@ -161,6 +168,17 @@ header#site-header {
 
 				@include media(">phone") {
 					padding-top:2.5rem;
+					.buttons-container {
+						position: relative;
+						margin-bottom: 1rem;
+					}
+
+					.file-selected {
+						position: absolute;
+						font-family: sans-serif;
+						font-size: 1.3rem;
+						bottom: -2.2rem;
+					}
 				}
 			}
 
