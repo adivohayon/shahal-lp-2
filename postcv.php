@@ -1,11 +1,9 @@
 <?php
-
 $target_dir = "uploads_cv/";
 $target_file = $target_dir .uniqid('cv_')
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
-
 
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {

@@ -85,12 +85,13 @@ gulp.task('lint:test', () => {
 gulp.task('html', ['styles', 'templates', 'partials', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
+    // .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: false}})))
     .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if(/\.html$/, $.htmlmin({
       collapseWhitespace: true,
       minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
+      // minifyJS: {compress: {drop_console: false}},
+      minifyJS: false,
       processConditionalComments: true,
       removeComments: true,
       removeEmptyAttributes: true,

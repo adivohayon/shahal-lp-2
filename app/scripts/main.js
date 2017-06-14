@@ -50,6 +50,7 @@ $(document).ready(function() {
 		    
 		   
 		    if (!go){
+		    	console.log('no go');
 		        return;
 		    }
 			
@@ -70,7 +71,7 @@ $(document).ready(function() {
 		        LASTNAME: lastName,
 		        EMAIL: email,
 		        PHONE1: fullPhone,
-		        CAMPAIGN_KEY: 'facebookms',
+		        CAMPAIGN_KEY: 'jobswanted',
 		        REDIRECTURL: '',
 				CITYNAME: '',
 		        ERRORURL: '',
@@ -78,46 +79,46 @@ $(document).ready(function() {
 		        Pid: 443,
 		        Sid: 67,
 		        strCAPTCHA: 'E301'
-
 		    };
 
-		    // $.get($url, $values).done(function (res) { 
-		    //     // fbq('track', 'shachal_lead');
-      //   	    $('#' + formType + '-form .hide-on-success').hide();
-      //           $('#' + formType + '-form .form-success-container').show();
-		    // });
+		    $.get($url, $values).done(function (res) { 
+		        fbq('track', 'shachal_lead');
+        	    $('#' + formType + '-form .hide-on-success').hide();
+                $('#' + formType + '-form .form-success-container').show();
+		    });
 
 		    // swal('נשלח בהצלחה');
 		    
-		    $('#' + formType + '-form .hide-on-success').hide();
-	        $('#' + formType + '-form .form-success-container').show();
-	        var files = $('#file-upload').prop('files');
-	        console.log(files);
-	        var data  = new FormData();
-	        data.append(cvFile, files[0]);
+		    // $('#' + formType + '-form .hide-on-success').hide();
+	     //    $('#' + formType + '-form .form-success-container').show();
+	        var file_data = $('#file-upload').prop('files')[0];
+	        // console.log(files);
+	        var form_data  = new FormData();
+	        form_data.append('file', file_data);
 
 		    var cv_url = 'http://dev.jetwebserver.com/shahal/postcv.php';
 
-		    console.log('cvFile', data);
-		    // $.ajax({
-		    //     url: 'http://dev.jetwebserver.com/shahal/postcv.php',
-		    //     data: data,
-		    //     cache: false,
-		    //     contentType: 'multipart/form-data',
-		    //     processData: false,
-		    //     type: 'POST',
-		    //     success: function(data){
-		    //         console.log('success',data);
-		    //     },
-		    //     error: function(resp) {
-		    //     	console.log('error', resp);
-		    //     }
-		    // });
-
-
-		    $.post($cv_url, $mail_values).done(function (res) { 
-		    	console.log(res);
+		    console.log('cvFile', form_data);
+		    $.ajax({
+		        url: 'http://dev.jetwebserver.com/shahal/postcv.php',
+               dataType: 'text',  // what to expect back from the PHP script, if anything
+               cache: false,
+               contentType: false,
+               processData: false,
+               data: form_data,                         
+               type: 'post',
+		        success: function(data){
+		            console.log('success',data);
+		        },
+		        error: function(resp) {
+		        	console.log('error', resp);
+		        }
 		    });
+
+
+		    // $.post(cv_url, data).done(function (res) { 
+		    // 	console.log(res);
+		    // });
 
 		    $('#' + formType + '-form').submit(function () {
 		        return;
